@@ -10,8 +10,7 @@
     "serve": "nuxt serve",
     "heroku-postbuild": "npm run build",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint": "npm run lint:js",
-    "prepublish": "npm run build:framevuerk"
+    "lint": "npm run lint:js"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.0-beta.20",
