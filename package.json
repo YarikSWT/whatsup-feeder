@@ -8,9 +8,9 @@
     "start": "nuxt start",
     "export": "nuxt export",
     "serve": "nuxt serve",
+    "heroku-postbuild": "npm run build",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "build:framevuerk": "framevuerk-builder -c ./framevuerk-config.js",
     "prepublish": "npm run build:framevuerk"
   },
   "dependencies": {
