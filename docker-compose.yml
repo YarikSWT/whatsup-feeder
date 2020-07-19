@@ -8,10 +8,6 @@ services:
     restart: always
     ports:
       - "3000:3000"
-    volumes:
-      - ./brand.env:/.env
-    env_file:
-      - brand.env
     command:
       "npm run start"
 
