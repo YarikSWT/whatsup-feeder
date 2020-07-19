@@ -89,6 +89,18 @@ export default {
         accurateTrackBounce: true,
       },
     ],
+    [
+      'nuxt-mq',
+      {
+        // Default breakpoint for SSR
+        defaultBreakpoint: 'default',
+        breakpoints: {
+          sm: 450,
+          md: 1250,
+          lg: Infinity,
+        },
+      },
+    ],
   ],
   /*
    ** Build configuration
