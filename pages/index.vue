@@ -48,6 +48,9 @@
             </el-card>
           </el-col>
         </el-row>
+        <div class="col-12 text-center mb-4">
+          <h1>Новинка</h1>
+        </div>
         <div v-for="i in 21" :key="i" class="col-12 col-md-4 col-lg-4">
           <img
             class="w-100 mb-3"
@@ -55,6 +58,11 @@
             alt=""
           />
         </div>
+      </div>
+      <div class="col-12 text-center mb-4">
+        <el-button type="default" class="button mt-3" @click="simple"
+          >Узнать подробнее</el-button
+        >
       </div>
     </div>
 
@@ -151,6 +159,12 @@ export default {
       this.currentPresent = index
       this.dialogVisible = true
     },
+    simple() {
+      window.open(
+        'https://api.whatsapp.com/send?phone=79191646801&text=Здравствуйте,%20Подскажите%20цену%20Цветов',
+        '_self'
+      )
+    },
     openWU() {
       window.open(
         'https://api.whatsapp.com/send?phone=79191646801&text=Здравствуйте,%20Подскажите%20цену%20' +
@@ -211,6 +225,14 @@ export default {
   .el-row {
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+
+  .head_text {
+    height: 210px;
+  }
+
+  h1 {
+    font-size: 30px !important;
   }
 }
 </style>
