@@ -1,13 +1,26 @@
 <template>
   <section>
+    <div
+      class="bg position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light"
+    >
+      <div class="col-md-5 p-lg-5 mx-auto my-5 head_text" style="">
+        <h1 class="display-4 font-weight-normal">Подарки для любимых</h1>
+        <p class="lead font-weight-normal">
+          На любой вкус и цвет от DnD Group
+        </p>
+        <a
+          class="btn btn-outline-secondary"
+          href="https://api.whatsapp.com/send?phone=79191646801&text=Здравствуйте,%20Подскажите%20цену%20Цветов"
+          >Узнать</a
+        >
+      </div>
+      <div class="product-device box-shadow d-none d-md-block"></div>
+      <div
+        class="product-device product-device-2 box-shadow d-none d-md-block"
+      ></div>
+    </div>
     <div class="container">
       <div class="row">
-        <div class="col-12 text-center">
-          <h1 class="mb-5">Подарки для любимых!</h1>
-        </div>
-        <div class="col-12 text-center">
-          <h2 class="mb-4">На любой вкус и цвет</h2>
-        </div>
         <el-row :gutter="30" class="w-100 my-5">
           <el-col
             v-for="(o, index) in presents"
@@ -35,6 +48,13 @@
             </el-card>
           </el-col>
         </el-row>
+        <div v-for="i in 21" :key="i" class="col-12 col-md-4 col-lg-4">
+          <img
+            class="w-100 mb-3"
+            :src="require(`~/assets/img/${i}.JPG`)"
+            alt=""
+          />
+        </div>
       </div>
     </div>
 
@@ -146,6 +166,22 @@ export default {
 .content {
   margin: 0 auto;
   max-width: 768px;
+}
+
+.bg {
+  background-image: url('../assets/img/2.JPG');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.head_text {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(248, 247, 250, 0.8);
+  border-radius: 10px;
 }
 
 .sidebar {
